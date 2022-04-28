@@ -35,13 +35,13 @@ export const Form = styled.form`
   height: 380px;
 
   /* h1 {
-    transform: translateY(-25px);
+    transform: translateY(-50px);
   } */
 
   .logo {
     width: 50px;
     height: 50px;
-    transform: translateY(-15px);
+    transform: translateY(-25px);
   }
 
   input {

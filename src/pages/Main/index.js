@@ -5,19 +5,35 @@ import { useState } from "react";
 
 function Main() {
   const [showRegisterModal, setShowRegisterModal] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
 
-  function handleCloseRegisterModal() {
+  function handleShowRegisterModal() {
     setShowRegisterModal(true);
+  }
+
+  function handleShowLoginModal() {
+    setShowLoginModal(true);
   }
 
   return (
     <main className="container-main">
       <header>
         Cabeçalho improvisado
-        <button>Login</button>
-        <button onClick={handleCloseRegisterModal}>Cadastrar</button>
+        <button onClick={handleShowLoginModal}>Login</button>
+        <button onClick={handleShowRegisterModal}>Cadastrar</button>
       </header>
-      {showRegisterModal && <Register closeRegister={setShowRegisterModal} />}
+      {showRegisterModal && (
+        <Register
+          closeRegister={setShowRegisterModal}
+          openLogin={setShowLoginModal}
+        />
+      )}
+      {showLoginModal && (
+        <Login
+          closeLogin={setShowLoginModal}
+          openRegister={setShowRegisterModal}
+        />
+      )}
     </main>
   );
 }
