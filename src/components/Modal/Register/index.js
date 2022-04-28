@@ -1,8 +1,9 @@
 import { useState } from "react";
 import * as R from "./style";
 import { ImCross } from "react-icons/im";
+import Logo from "../../../assets/logo.png";
 
-export default function Register({ closeRegister }) {
+export default function Register({ closeRegister, openLogin }) {
   const [form, setForm] = useState({
     name: ``,
     email: ``,
@@ -21,11 +22,17 @@ export default function Register({ closeRegister }) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
+  function handleChangeToRegister() {
+    closeRegister(false);
+    openLogin(true);
+  }
+
   return (
     <R.Container>
       <ImCross onClick={() => closeRegister(false)} />
       <R.Form onSubmit={handleSubmit}>
-        <h1>Logo</h1>
+        {/* <h1>Logo</h1> */}
+        <img className="logo" src={Logo} alt="logo" />
         <input
           value={form.name}
           name="name"
@@ -55,6 +62,9 @@ export default function Register({ closeRegister }) {
           onChange={handleChangerForm}
         />
         <button type="submit">Cadastrar</button>
+        <p>
+          Possui conta? Faça <span onClick={handleChangeToRegister}>Login</span>
+        </p>
       </R.Form>
     </R.Container>
   );
