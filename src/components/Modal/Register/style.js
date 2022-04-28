@@ -57,23 +57,3 @@ export const Form = styled.form`
     border-radius: 3px;
   }
 `;
-
-// .container-register {
-//   /* height: 100vh; */
-//   /* background: rgba(0, 0, 0, 0.8); */
-//   /* position: fixed; */
-//   /* top: 0; */
-//   /* right: 0; */
-//   /* bottom: 0; */
-//   /* left: 0; */
-// }
-
-// form {
-//   /* width: 300px; */
-//   /* height: 380px; */
-//   /* background-color: white; */
-// }
-
-// .inputs-register {
-//   /* align-items: flex-start; */
-// }
