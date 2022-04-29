@@ -2,6 +2,8 @@ import "./style.css";
 import Login from "../../components/Modal/Login";
 import Register from "../../components/Modal/Register";
 import { useState } from "react";
+import Header from "../../components/Header";
+import Button from "../../components/Button";
 
 function Main() {
   const [showRegisterModal, setShowRegisterModal] = useState(false);
@@ -16,12 +18,12 @@ function Main() {
   }
 
   return (
-    <main className="container-main">
-      <header>
-        Cabeçalho improvisado
-        <button onClick={handleShowLoginModal}>Login</button>
-        <button onClick={handleShowRegisterModal}>Cadastrar</button>
-      </header>
+    <>
+      <Header>
+        <Button onClick={handleShowLoginModal}>Login</Button>
+        <Button onClick={handleShowRegisterModal}>Cadastrar</Button>
+      </Header>
+      <main className="container-main"></main>
       {showRegisterModal && (
         <Register
           closeRegister={setShowRegisterModal}
@@ -34,7 +36,7 @@ function Main() {
           openRegister={setShowRegisterModal}
         />
       )}
-    </main>
+    </>
   );
 }
 

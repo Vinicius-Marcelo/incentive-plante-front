@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: #12121295;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 
   display: flex;
@@ -10,6 +10,7 @@ export const Container = styled.div`
   align-items: center;
 
   position: fixed;
+  inset: 0;
 
   svg {
     position: absolute;
@@ -34,14 +35,9 @@ export const Form = styled.form`
   width: 300px;
   height: 380px;
 
-  /* h1 {
-    transform: translateY(-25px);
-  } */
-
   .logo {
-    width: 50px;
-    height: 50px;
-    transform: translateY(-15px);
+    width: 120px;
+    transform: translateY(-10px);
   }
 
   input {

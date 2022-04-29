@@ -10,6 +10,7 @@ export const Container = styled.div`
   align-items: center;
 
   position: fixed;
+  inset: 0;
 
   svg {
     position: absolute;
@@ -34,14 +35,9 @@ export const Form = styled.form`
   width: 300px;
   height: 380px;
 
-  /* h1 {
-    transform: translateY(-50px);
-  } */
-
   .logo {
-    width: 50px;
-    height: 50px;
-    transform: translateY(-25px);
+    width: 120px;
+    transform: translateY(-30px);
   }
 
   input {
