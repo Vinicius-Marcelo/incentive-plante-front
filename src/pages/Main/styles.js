@@ -47,61 +47,182 @@ export const BoxCarousel = styled.section`
 `;
 
 export const DifferentialText = styled.section`
-  height: 200px;
-  background-color: var(--white);
+  min-height: 575px;
+  background-color: #012030;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
-  padding: 20px 60px;
-
-  h2 {
-    margin-bottom: 30px;
+  .title-numbers{
+    display: flex;  
+    justify-content: center;
+    height: 30px;
+    margin-top: 26px;
   }
-  p {
+
+  h3{
+    margin-bottom: 30px;
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%
+  }
+  .data{
+    display: flex;
+    align-items: center;
+    gap: 65.57px;
+  }
+  .help{
+    font: weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+  }
+  button{
+    all: unset;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+
+    font: weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+
+    width: 265px;
+    height: 35px;
+    border-radius: 10px;
+    background: #ffdd65;
+    margin-bottom: 48px;
   }
 `;
 
 export const Graphic = styled.section`
-  background-color: var(--transparent-green);
-
-  height: 200px;
-  padding: 20px 60px;
-`;
-
-export const Map = styled.section`
-  background-color: var(--white);
-
-  height: 500px;
-  padding: 20px 60px;
-`;
-
-export const BoxInfo = styled.section`
+  background-color: #fff;
   display: flex;
-  justify-content: center;
-  padding: 0 60px;
+  flex-direction: column;
+  align-items: center;
 
-  background-color: var(--green);
-
-  .info {
-    width: 350px;
-    height: 300px;
-    background-color: var(--green);
-
-    padding: 20px;
-    text-align: center;
+  .title-adopt{
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 33.02px 0 11.82px 0;  
+  }
+  
+  h3{
+    font-weight: 700;
+    font-size: 30px:
+    line-height: 100%;
+    color: #006838;
   }
 
-  .info--second {
-    border-left: 2px solid;
-    border-right: 2px solid;
-    border-color: var(--white);
+  span{
+    font-weight: 400;
+    font-size: 15px:
+    line-height: 18px;
+    margin-bottom: 47.04px;
+  }
 
-    width: 400px;
-    margin: 0 25px;
+  .elements-map{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 100vw;
+  }
+
+  .map{
+    width: 409px;
+    height: 425px;
+  }
+
+  label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    position: absolute;
+  }
+
+  .card{
+    width: 31px;
+    height: 33px;
+  }
+
+  .area-north{
+    top: 100px;
+    left: 340px;
+  }
+  .north{
+    background: #b2d768;
+  }
+
+  .area-north-east{
+    top: 110px;
+    right: 300px;
+  }
+  .north-east{
+    background: #ff9900;
+  }
+
+  .area-midwest{
+    top: 220px;
+    left: 420px;
+  }
+  .midwest{
+    background: #ffd52a;
+  }
+
+  .area-southeast{
+    top: 280px;
+    right: 370px;
+  }
+  .southeast{
+    background: #cd0000;
+  }
+
+  .area-south{
+    top: 380px;
+    right: 500px;
+  }
+  .south{
+    background: #3b6097;
   }
 `;
+
+// export const Map = styled.section`
+//   background-color: var(--white);
+
+//   height: 500px;
+//   padding: 20px 60px;
+// `;
+
+// export const BoxInfo = styled.section`
+//   display: flex;
+//   justify-content: center;
+//   padding: 0 60px;
+
+//   background-color: var(--green);
+
+//   .info {
+//     width: 350px;
+//     height: 300px;
+//     background-color: var(--green);
+
+//     padding: 20px;
+//     text-align: center;
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   .info--second {
+//     border-left: 2px solid;
+//     border-right: 2px solid;
+//     border-color: var(--white);
+
+//     width: 400px;
+//     margin: 0 25px;
+//   }
+// `;

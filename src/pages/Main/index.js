@@ -5,6 +5,11 @@ import Header from "../../components/Header";
 import Button from "../../components/Button";
 import * as M from "./styles";
 import Footer from "../../components/Footer";
+import North from "../../components/Numbers/North";
+import South from "../../components/Numbers/South";
+import Nordeste from '../../components/Numbers/Nordeste';
+import Icon from '../../assets/icon.svg';
+import Map from '../../assets/map.svg';
 
 function Main() {
   const [showRegisterModal, setShowRegisterModal] = useState(false);
@@ -55,47 +60,52 @@ function Main() {
           <div>Card</div>
         </M.BoxCarousel>
         <M.DifferentialText>
-          <h2>Texto Diferencial</h2>
-          <p>
-            O desmatamento é um processo de degradação da vegetação nativa de
-            uma região e pode provocar um processo de desertificação. Além
-            disso, é considerado como desmatamento a retirada completa da
-            vegetação a partir do chamado “corte raso”.
-          </p>
+          <div className="title-numbers">
+            <img src={Icon} alt='icon' />
+            <h3>Números</h3>
+          </div>
+          <div className="data">
+            <South />
+            <North />
+            <Nordeste />
+          </div>
+          <span className="help">Ajude a mudar o mundo e adote um árvore!</span>
+          <button>QUERO ADOTAR</button>
         </M.DifferentialText>
 
-        <M.Graphic>Gráfico</M.Graphic>
-
-        <M.Map>o mapa vai aqui</M.Map>
-
-        <M.BoxInfo>
-          <p className="info ">
-            Desflorestação, desflorestamento, desmate ou desmatamento é o
-            processo de desaparecimento completo e permanente de florestas,
-            atualmente causado em sua maior parte por atividades humanas.
-          </p>
-          <p className="info info--second">
-            Desflorestação, desflorestamento, desmate ou desmatamento é o
-            processo de desaparecimento completo e permanente de florestas,
-            atualmente causado em sua maior parte por atividades humanas.
-          </p>
-          <p className="info ">
-            Desflorestação, desflorestamento, desmate ou desmatamento é o
-            processo de desaparecimento completo e permanente de florestas,
-            atualmente causado em sua maior parte por atividades humanas.
-          </p>
-        </M.BoxInfo>
-        <section>
-          Esse botão faz o que?
-          <button>Call To Action</button>
-        </section>
-        <section>Pra que serve esse form??</section>
+        <M.Graphic>
+          <div className="title-adopt">
+            <img src={Icon} alt='icon' />
+            <h3>Adote</h3>
+          </div>
+          <span>
+            Conheça as árvores mais apropriadas para o plantio em cada região do Brasil.
+          </span>
+          <div className="elements-map">
+            <img src={Map} alt='mapa' className="map" />
+            <label className="area-north">
+              <div className="card north"></div>
+              <h4>Norte</h4>
+            </label>
+            <label className="area-north-east">
+              <div className="card north-east"></div>
+              <h4>Nordeste</h4>
+            </label>
+            <label className="area-midwest">
+              <div className="card midwest"></div>
+              <h4>Centro-Oeste</h4>
+            </label>
+            <label className="area-southeast">
+              <div className="card southeast"></div>
+              <h4>Suldeste</h4>
+            </label>
+            <label className="area-south">
+              <div className="card south"></div>
+              <h4>Sul</h4>
+            </label>
+          </div>
+        </M.Graphic>
       </M.Container>
-      <Footer>
-        <div>redes sociais</div>
-
-        <div>Copy</div>
-      </Footer>
     </>
   );
 }
