@@ -9,7 +9,7 @@ export const Container = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 30px;
+  padding: 0 60px;
 
   .logo {
     width: 120px;
