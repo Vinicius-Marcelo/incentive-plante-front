@@ -100,96 +100,12 @@ export const DifferentialText = styled.section`
 
 export const Graphic = styled.section`
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100vw;
+`;
 
-  .title-adopt{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 33.02px 0 11.82px 0;  
-  }
-  
-  h3{
-    font-weight: 700;
-    font-size: 30px:
-    line-height: 100%;
-    color: #006838;
-  }
-
-  span{
-    font-weight: 400;
-    font-size: 15px:
-    line-height: 18px;
-    margin-bottom: 47.04px;
-  }
-
-  .elements-map{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      width: 100vw;
-  }
-
-  .map{
-    width: 409px;
-    height: 425px;
-  }
-
-  label{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 11px;
-    position: absolute;
-  }
-
-  .card{
-    width: 31px;
-    height: 33px;
-  }
-
-  .area-north{
-    top: 100px;
-    left: 340px;
-  }
-  .north{
-    background: #b2d768;
-  }
-
-  .area-north-east{
-    top: 110px;
-    right: 300px;
-  }
-  .north-east{
-    background: #ff9900;
-  }
-
-  .area-midwest{
-    top: 220px;
-    left: 420px;
-  }
-  .midwest{
-    background: #ffd52a;
-  }
-
-  .area-southeast{
-    top: 280px;
-    right: 370px;
-  }
-  .southeast{
-    background: #cd0000;
-  }
-
-  .area-south{
-    top: 380px;
-    right: 500px;
-  }
-  .south{
-    background: #3b6097;
-  }
+export const Communitie = styled.section`
+  background-color: #012030;
+  width: 100vw;
 `;
 
 // export const Map = styled.section`

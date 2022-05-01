@@ -1,15 +1,17 @@
+import { useState } from "react";
+import Icon from '../../assets/icon.svg';
+import Adopt from "../../components/Adopt";
+import Button from "../../components/Button";
+import Communities from "../../components/Communities";
+import Header from "../../components/Header";
 import Login from "../../components/Modal/Login";
 import Register from "../../components/Modal/Register";
-import { useState } from "react";
-import Header from "../../components/Header";
-import Button from "../../components/Button";
-import * as M from "./styles";
-import Footer from "../../components/Footer";
+import Nordeste from '../../components/Numbers/Nordeste';
 import North from "../../components/Numbers/North";
 import South from "../../components/Numbers/South";
-import Nordeste from '../../components/Numbers/Nordeste';
-import Icon from '../../assets/icon.svg';
-import Map from '../../assets/map.svg';
+import InputInformation from "../../components/InputInformation";
+import Footer from "../../components/Footer";
+import * as M from "./styles";
 
 function Main() {
   const [showRegisterModal, setShowRegisterModal] = useState(false);
@@ -74,37 +76,14 @@ function Main() {
         </M.DifferentialText>
 
         <M.Graphic>
-          <div className="title-adopt">
-            <img src={Icon} alt='icon' />
-            <h3>Adote</h3>
-          </div>
-          <span>
-            Conheça as árvores mais apropriadas para o plantio em cada região do Brasil.
-          </span>
-          <div className="elements-map">
-            <img src={Map} alt='mapa' className="map" />
-            <label className="area-north">
-              <div className="card north"></div>
-              <h4>Norte</h4>
-            </label>
-            <label className="area-north-east">
-              <div className="card north-east"></div>
-              <h4>Nordeste</h4>
-            </label>
-            <label className="area-midwest">
-              <div className="card midwest"></div>
-              <h4>Centro-Oeste</h4>
-            </label>
-            <label className="area-southeast">
-              <div className="card southeast"></div>
-              <h4>Suldeste</h4>
-            </label>
-            <label className="area-south">
-              <div className="card south"></div>
-              <h4>Sul</h4>
-            </label>
-          </div>
+          <Adopt />
         </M.Graphic>
+
+        <M.Communitie>
+          <Communities />
+        </M.Communitie>
+        <InputInformation />
+        <Footer />
       </M.Container>
     </>
   );
