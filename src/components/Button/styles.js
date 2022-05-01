@@ -1,21 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
-  min-width: 90px;
-  height: 30px;
-  border-radius: 3px;
+  width: 107.82px;
+  height: 45px;
+  border-radius: 10px;
 
-  background-color: var(--dark-green);
-  border: 2px solid var(--green);
-  color: var(--green);
+  background-color: var(--blue);
+  color: var(--white);
 
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 16px;
 
   margin: 15px;
-
-  :hover {
-    background-color: var(--green);
-    color: var(--dark-green);
-  }
 `;

@@ -1,16 +1,59 @@
 import styled from "styled-components";
+import BannerImage from '../../assets/banner-background.png'
 
 export const Container = styled.main`
   min-height: calc(100vh - 100px);
 `;
 
 export const Banner = styled.section`
-  height: 200px;
-  background-color: var(--green);
-  padding: 20px 60px;
+  height: 530px;
+  max-width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  background-image: url(${BannerImage});
+  background-size: cover;
+  background-position: center;
+
+  color: var(--white);
+
+  padding: 0 0 65px 60px;
+
+  div {
+    width: 290px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  h1 {
+    font-weight: 500;
+    font-size: 37.4156px;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 30px;
+  }
+
+  button {
+    width: 265px;
+    height: 35px;
+
+    background: var(--yellow);
+    border-radius: 10px;
+
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--gray);
+  }
 `;
 
-export const ProjectText = styled.section`
+export const OurFuture = styled.article`
   height: 200px;
   background-color: var(--white);
 
@@ -26,6 +69,12 @@ export const ProjectText = styled.section`
   }
   p {
   }
+`;
+
+export const OurFutureSection = styled.section`
+`;
+
+export const Partners = styled.section`
 `;
 
 export const BoxCarousel = styled.section`

@@ -1,20 +1,32 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-  height: 100px;
+  height: 105px;
 
-  background-color: var(--dark-green);
+  background-color: var(--yellow);
+  padding: 0 60px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 60px;
+  font-weight: 500;
+  font-size: 16px;
 
-  .logo {
-    width: 120px;
+  .Logo {
+    width: 165px;
+    height: 88px;
   }
 
-  .right_side {
+  .Middle {
+    color: var(--blue);
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 45px;
+    }
+  }
+
+  .Right-Side {
   }
 `;

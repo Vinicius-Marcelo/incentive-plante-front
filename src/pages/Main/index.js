@@ -1,26 +1,28 @@
-import Login from "../../components/Modal/Login";
-import Register from "../../components/Modal/Register";
-import { useState } from "react";
+//import Login from "../../components/Modal/Login";
+//import Register from "../../components/Modal/Register";
+//import { useState } from "react";
 import Header from "../../components/Header";
 import Button from "../../components/Button";
 import * as M from "./styles";
 import Footer from "../../components/Footer";
 
+import PlantDetail from "../../assets/plant-detail.svg"
+
 function Main() {
-  const [showRegisterModal, setShowRegisterModal] = useState(false);
-  const [showLoginModal, setShowLoginModal] = useState(false);
+  // const [showRegisterModal, setShowRegisterModal] = useState(false);
+  //const [showLoginModal, setShowLoginModal] = useState(false);
 
-  function handleShowRegisterModal() {
-    setShowRegisterModal(true);
-  }
+  // function handleShowRegisterModal() {
+    //setShowRegisterModal(true);
+  //}
 
-  function handleShowLoginModal() {
-    setShowLoginModal(true);
-  }
+  //function handleShowLoginModal() {
+    //setShowLoginModal(true);
+  //}
 
   return (
     <>
-      {showRegisterModal && (
+      {/*{showRegisterModal && (
         <Register
           closeRegister={setShowRegisterModal}
           openLogin={setShowLoginModal}
@@ -31,66 +33,42 @@ function Main() {
           closeLogin={setShowLoginModal}
           openRegister={setShowRegisterModal}
         />
-      )}
+        onClick={handleShowLoginModal}
+      )}*/}
       <Header>
-        <Button onClick={handleShowLoginModal}>Login</Button>
-        <Button onClick={handleShowRegisterModal}>Cadastrar</Button>
+        <Button >Login</Button>
+        {/* <Button onClick={handleShowRegisterModal}>Cadastrar</Button> */}
       </Header>
       <M.Container className="container-main">
         <M.Banner>
-          <h1>Banner</h1>
+          <div>
+            <h1>O planeta precisa de você, vamos começar hoje?</h1>
+            <h2>Adote uma árvore!</h2>
+            <button>QUERO ADOTAR</button>
+          </div>
         </M.Banner>
-        <M.ProjectText>
-          <h2>Texto sobre o projeto</h2>
-          <p>
-            O desmatamento é um processo de degradação da vegetação nativa de
-            uma região e pode provocar um processo de desertificação. Além
-            disso, é considerado como desmatamento a retirada completa da
-            vegetação a partir do chamado “corte raso”.
-          </p>
-        </M.ProjectText>
-        <M.BoxCarousel>
-          <div>Card</div>
-          <div>Card</div>
-          <div>Card</div>
-        </M.BoxCarousel>
-        <M.DifferentialText>
-          <h2>Texto Diferencial</h2>
-          <p>
-            O desmatamento é um processo de degradação da vegetação nativa de
-            uma região e pode provocar um processo de desertificação. Além
-            disso, é considerado como desmatamento a retirada completa da
-            vegetação a partir do chamado “corte raso”.
-          </p>
-        </M.DifferentialText>
-
-        <M.Graphic>Gráfico</M.Graphic>
-
-        <M.Map>o mapa vai aqui</M.Map>
-
-        <M.BoxInfo>
-          <p className="info ">
-            Desflorestação, desflorestamento, desmate ou desmatamento é o
-            processo de desaparecimento completo e permanente de florestas,
-            atualmente causado em sua maior parte por atividades humanas.
-          </p>
-          <p className="info info--second">
-            Desflorestação, desflorestamento, desmate ou desmatamento é o
-            processo de desaparecimento completo e permanente de florestas,
-            atualmente causado em sua maior parte por atividades humanas.
-          </p>
-          <p className="info ">
-            Desflorestação, desflorestamento, desmate ou desmatamento é o
-            processo de desaparecimento completo e permanente de florestas,
-            atualmente causado em sua maior parte por atividades humanas.
-          </p>
-        </M.BoxInfo>
-        <section>
-          Esse botão faz o que?
-          <button>Call To Action</button>
-        </section>
-        <section>Pra que serve esse form??</section>
-      </M.Container>
+        <M.OurFuture>
+          <h2><img src={PlantDetail} alt="Formato delicado de planta"/>Nosso futuro</h2>
+          <M.OurFutureSection className="FirstSection">
+            <div>
+              <h4>O Incentive</h4>
+              <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. (O projeto) 
+              </p>
+            </div>
+          </M.OurFutureSection>
+          <M.OurFutureSection className="SecondSection">
+            <div>
+              <h4>O Plante</h4>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Type specimen book. It has survived not only five centuries, remaining essentially unchanged.( O diferencial - plante uma nova ideia, ajude o mundo e a comunidade - o que estamos plantando no mundo! )
+              </p>
+            </div>
+          </M.OurFutureSection>
+        </M.OurFuture>
+        <M.Partners>
+          <h3></h3>
+        </M.Partners>
       <Footer>
         <div>redes sociais</div>
 
