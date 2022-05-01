@@ -7,6 +7,7 @@ export default function ProjectRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Main />} />
+      <Route path="/usuario" element={<UserLogged />} />
     </Routes>
   );
 }
