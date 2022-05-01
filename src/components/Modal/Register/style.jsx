@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: #12121295;
-  min-height: 100vh;
+  background-color: var(--modal-background);
+  height: 100vh;
   width: 100vw;
 
   display: flex;
@@ -11,16 +11,17 @@ export const Container = styled.div`
 
   position: fixed;
   inset: 0;
+  z-index: 3;
 
   svg {
-    position: absolute;
-    top: 15px;
-    right: 15px;
+    cursor: pointer;
 
-    color: #f9f9f9;
+    position: absolute;
+    top: 40px;
+    right: 450px;
 
     font-size: 1.5rem;
-    cursor: pointer;
+    color: var(--white);
   }
 `;
 
@@ -29,50 +30,86 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 13px;
 
-  background-color: #f9f9f9;
+  width: 382px;
+  height: 600px;
 
-  width: 300px;
-  height: 380px;
+  background-color: var(--modal);
+  border: 1px solid var(--border);
+  border-radius: 14.0345px;
+  padding: 25px 15px;
 
   h1 {
     font-weight: 700;
     font-size: 20px;
     color: var(--white);
 
+    padding-bottom: 10px;
     border-bottom: 1px solid var(--white);
     margin-bottom: 15px;
   }
 
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  label {
+    color: var(--blue);
+  }
+
   input {
-    height: 25px;
-    width: 200px;
+    height: 27.5px;
 
-    border-radius: 3px;
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 12.5px 16px;
+  }
 
-    margin: 10px 0;
-    padding-left: 15px;
+  section {
+    display: flex;
+    gap: 15px;
+  }
 
-    border: 1px solid #121212;
+  .EachInput {
+    width: 300px;
+  }
+
+  .Cep-Input {
+    width: 160px
+  }
+
+  .Idade-Input {
+    width: 90px
+  }
+
+  input::placeholder {
+    color: var(--placeholder);
   }
 
   button {
-    width: 200px;
-    height: 30px;
+    width: 330px;
+    height: 40px;
 
-    border-radius: 3px;
+    border-radius: 5px;
+
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--blue);
 
     margin: 15px 0;
   }
 
-  p {
-    span {
-      color: #999999;
-      cursor: pointer;
+  .Button-Entry {
+    background-color: var(--yellow);
+  }
 
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+  .Underline {
+    cursor: pointer;
+    color: var(--yellow);
+    font-size: 18px;
+    text-decoration: underline;
   }
 `;

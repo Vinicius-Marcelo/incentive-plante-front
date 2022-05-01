@@ -1,13 +1,16 @@
 import * as R from "./style";
 import { ImCross } from "react-icons/im";
 
-import { useState } from "react";
-import useStateByMe from "../../../hooks/useStateByMe"
+import { useState, useRef } from "react";
 
-import Logo from "../../../assets/logo.png";
+import api from '../../../services/api'
 
-export default function Register() {
-  const { setShowLoginModal, setShowRegisterModal } = useStateByMe();
+export default function Register({ openRegisterModal, openLoginModal }) {
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const cepRef = useRef(null);
+  const passwordRef = useRef(null);
+
   const [form, setForm] = useState({
     name: ``,
     email: ``,
@@ -16,30 +19,75 @@ export default function Register() {
     password: ``,
   });
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    try {
-      if (!form.name || !form.email || !form.password || !form.cep) return;
-    } catch (error) {}
-  }
-
   function handleChangerForm(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
+  async function handleSubmit(e) {
+    e.preventDefault();
+    if (!form.name || !form.email || !form.password || !form.cep) return;
+    if (!form.email) {
+      nameRef.current.textContent = 'Nome é um campo obrigatório';
+      nameRef.current.style.color = 'red';
+    } 
+    if (!form.email) {
+      emailRef.current.textContent = 'Nome é um campo obrigatório';
+      emailRef.current.style.color = 'red';
+    } 
+    if (!form.password) {
+      cepRef.current.textContent = 'CEP é um campo obrigatório';
+      cepRef.current.style.color = 'red';
+    }
+    if (!form.password) {
+      passwordRef.current.textContent = 'Email é um campo obrigatório';
+      passwordRef.current.style.color = 'red';
+    }
+    console.log(form)
+    handleSignUp();
+  }
+
+  async function handleSignUp () {
+    console.log('entrou no sign up')
+    try {
+      const response = await api.post('/signup', {
+        ...form
+      })
+
+      console.log(response)
+      openRegisterModal(false);
+      openLoginModal(true);
+
+      handleClearForm()
+    } catch (error) {
+      console.log(error.message);
+      console.log(error.response.data.message);
+    }
+  }
+
+  function handleClearForm () {
+    setForm({
+      name: ``,
+      email: ``,
+      cep: ``,
+      age: ``,
+      password: ``,
+    });
+  }
+
   function handleChangeToRegister() {
-    setShowRegisterModal(false);
-    setShowLoginModal(true);
+    openRegisterModal(false);
+    openLoginModal(true);
   }
 
   return (
     <R.Container>
-      <ImCross onClick={() => setShowRegisterModal(false)} />
+      <ImCross onClick={() => openRegisterModal(false)} />
       <R.Form onSubmit={handleSubmit}>
         <h1>FAÇA SEU CADASTRO</h1>
         <div>
           <label>Nome</label>
           <input
+          className="EachInput"
           value={form.name}
           name="name"
           type="text"
@@ -50,6 +98,7 @@ export default function Register() {
         <div>
           <label>E-mail</label>
           <input
+          className="EachInput"
           value={form.email}
           name="email"
           type="text"
@@ -57,9 +106,11 @@ export default function Register() {
           onChange={handleChangerForm}
         />
         </div>
-        <div>
+        <section>
+          <div>
           <label>CEP</label>
           <input
+          className="Cep-Input"
           value={form.cep}
           name="cep"
           type="number"
@@ -70,6 +121,7 @@ export default function Register() {
         <div>
           <label>Idade</label>
           <input
+          className="Idade-Input"
           value={form.idade}
           name="age"
           type="number"
@@ -77,9 +129,11 @@ export default function Register() {
           onChange={handleChangerForm}
           />
         </div>
-        <div>
+        </section>
+        <div >
           <label>Senha</label>
           <input
+          className="EachInput"
           value={form.password}
           name="password"
           type="password"
@@ -87,9 +141,9 @@ export default function Register() {
           onChange={handleChangerForm}
          />
         </div>
-        <button type="submit">Cadastrar</button>
+        <button className="Button-Entry" type="submit">Cadastrar</button>
         <p>
-          Possui conta? Faça <span onClick={handleChangeToRegister}>Login</span>
+          Possui conta? Faça o<span className="Underline" onClick={handleChangeToRegister}>Login</span>
         </p>
       </R.Form>
     </R.Container>
