@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: #12121295;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 
   display: flex;
@@ -35,9 +35,13 @@ export const Form = styled.form`
   width: 300px;
   height: 380px;
 
-  .logo {
-    width: 120px;
-    transform: translateY(-30px);
+  h1 {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--white);
+
+    border-bottom: 1px solid var(--white);
+    margin-bottom: 15px;
   }
 
   input {
