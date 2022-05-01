@@ -5,8 +5,8 @@ export const Container = styled.button`
   height: 45px;
   border-radius: 10px;
 
-  background-color: var(--blue);
-  color: var(--white);
+  background-color: ${({ isYellow }) => (isYellow ? "#FFDD65" : "#6E9D3E")};
+  color: ${({ isYellow }) => (isYellow ? "#012030" : "#FFFFFF")};
 
   font-weight: 500;
   font-size: 16px;

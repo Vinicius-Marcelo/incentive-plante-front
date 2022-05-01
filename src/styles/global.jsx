@@ -7,7 +7,6 @@ export default createGlobalStyle`
     --white: #FFFFFF;
     --green: #006838;
     --black: #000000;
-    --gray: #012030;
     --modal: #6E9D3E;
     --modal-background: rgba(1, 32, 48, 0.8);
     --placeholder: #BEBEBE;
