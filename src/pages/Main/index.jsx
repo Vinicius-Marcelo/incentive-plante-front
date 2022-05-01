@@ -1,10 +1,12 @@
-//import Login from "../../components/Modal/Login";
-//import Register from "../../components/Modal/Register";
-//import { useState } from "react";
+import * as M from "./styles";
+
 import Header from "../../components/Header";
 import Button from "../../components/Button";
-import * as M from "./styles";
 import Footer from "../../components/Footer";
+import Login from "../../components/Modal/Login";
+import Register from "../../components/Modal/Register";
+
+import useStateByMe from "../../hooks/useStateByMe"
 
 import PlantDetail from "../../assets/plant-detail.svg";
 import TagLogo from "../../assets/tag-logo.svg";
@@ -12,36 +14,19 @@ import IfoodLogo from "../../assets/ifood-logo.svg";
 import JoaniniLogo from "../../assets/joanini-logo.svg"
 
 function Main() {
-  // const [showRegisterModal, setShowRegisterModal] = useState(false);
-  //const [showLoginModal, setShowLoginModal] = useState(false);
+  const { showLoginModal, setShowLoginModal, showRegisterModal  } = useStateByMe();
 
-  // function handleShowRegisterModal() {
-    //setShowRegisterModal(true);
-  //}
-
-  //function handleShowLoginModal() {
-    //setShowLoginModal(true);
-  //}
+  function handleShowLoginModal() {
+    setShowLoginModal(true);
+  }
 
   return (
       <M.Container className="container-main">
-        {/*{showRegisterModal && (
-        <Register
-          closeRegister={setShowRegisterModal}
-          openLogin={setShowLoginModal}
-        />
-        )}
-      {showLoginModal && (
-        <Login
-          closeLogin={setShowLoginModal}
-          openRegister={setShowRegisterModal}
-        />
-        onClick={handleShowLoginModal}
-      )}*/}
+        {showRegisterModal && <Register/>}
+        {showLoginModal && <Login />}
         <Header>
-        <Button >Login</Button>
-        {/* <Button onClick={handleShowRegisterModal}>Cadastrar</Button> */}
-      </Header>
+          <Button onClick={handleShowLoginModal}>Login</Button>
+        </Header>
         <M.Banner>
           <div>
             <h1>O planeta precisa de você, vamos começar hoje?</h1>

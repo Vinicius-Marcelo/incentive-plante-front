@@ -1,9 +1,13 @@
-import { useState } from "react";
 import * as R from "./style";
 import { ImCross } from "react-icons/im";
+
+import { useState } from "react";
+import useStateByMe from "../../../hooks/useStateByMe"
+
 import Logo from "../../../assets/logo.png";
 
-export default function Register({ closeRegister, openLogin }) {
+export default function Register() {
+  const { setShowLoginModal, setShowRegisterModal } = useStateByMe();
   const [form, setForm] = useState({
     name: ``,
     email: ``,
@@ -23,13 +27,13 @@ export default function Register({ closeRegister, openLogin }) {
   }
 
   function handleChangeToRegister() {
-    closeRegister(false);
-    openLogin(true);
+    setShowRegisterModal(false);
+    setShowLoginModal(true);
   }
 
   return (
     <R.Container>
-      <ImCross onClick={() => closeRegister(false)} />
+      <ImCross onClick={() => setShowRegisterModal(false)} />
       <R.Form onSubmit={handleSubmit}>
         {/* <h1>Logo</h1> */}
         <img className="logo" src={Logo} alt="logo" />
