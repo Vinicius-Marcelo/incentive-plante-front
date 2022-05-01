@@ -112,7 +112,7 @@ export const MoreInfo = styled.section`
   div {
     padding: 0 85px;
 
-    p {
+    .mainInfo {
       height: 100px;
       border: 1px solid var(--black);
       border-radius: 20px;
@@ -126,12 +126,21 @@ export const MoreInfo = styled.section`
       font-weight: bold;
       cursor: pointer;
 
+      transition: all 500ms ease-in-out;
+
       span {
       }
+
       svg {
         width: 45px;
         height: 45px;
       }
+    }
+
+    .mainInfo_details {
+      padding: 20px 50px;
+      font-size: 20px;
+      transition: all 500ms ease-in-out;
     }
   }
 `;

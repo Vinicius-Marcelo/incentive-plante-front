@@ -14,10 +14,22 @@ import Imnegra from "../../assets/imnegra.svg";
 import Kaninde from "../../assets/kaninde.svg";
 import BiomeBrazil from "../../assets/biomes_brazil.svg";
 
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
-  function handleLogout() {}
+  const [showFirstInfo, setShowFirstInfo] = useState(false);
+  const [showSecondInfo, setShowSecondInfo] = useState(false);
+  const [showThirdInfo, setShowThirdInfo] = useState(false);
+
+  const navigate = useNavigate();
+
+  function handleLogout() {
+    localStorage.clear();
+
+    navigate("/");
+  }
 
   return (
     <>
@@ -104,24 +116,75 @@ export default function Dashboard() {
             Fique informado
           </h1>
           <div>
-            <p>
+            <p
+              className="mainInfo"
+              onClick={() => setShowFirstInfo(!showFirstInfo)}
+            >
               <span>
                 Monitoramento aponta aumento de 50% em alertas de desmatamento
                 no Sudeste
               </span>
-              <IoIosArrowDown />
+              {showFirstInfo ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </p>
-            <p>
+            {showFirstInfo && (
+              <p className="mainInfo_details">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </p>
+            )}
+            <p
+              className="mainInfo"
+              onClick={() => setShowSecondInfo(!showSecondInfo)}
+            >
               <span>
                 Sudeste será região mais afetada por desmate da Amazônia, diz
                 líder do IPCC.
               </span>
-              <IoIosArrowDown />
+              {showSecondInfo ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </p>
-            <p>
+            {showSecondInfo && (
+              <p className="mainInfo_details">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </p>
+            )}
+            <p
+              className="mainInfo"
+              onClick={() => setShowThirdInfo(!showThirdInfo)}
+            >
               <span>Região Sudeste: Paisagens intensamente Transformadas</span>
-              <IoIosArrowDown />
+              {showThirdInfo ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </p>
+            {showThirdInfo && (
+              <p className="mainInfo_details">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </p>
+            )}
           </div>
         </D.MoreInfo>
         <D.Biomes>
