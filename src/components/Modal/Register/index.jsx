@@ -11,8 +11,9 @@ export default function Register() {
   const [form, setForm] = useState({
     name: ``,
     email: ``,
-    password: ``,
     cep: ``,
+    age: ``,
+    password: ``,
   });
 
   function handleSubmit(e) {
@@ -35,36 +36,57 @@ export default function Register() {
     <R.Container>
       <ImCross onClick={() => setShowRegisterModal(false)} />
       <R.Form onSubmit={handleSubmit}>
-        {/* <h1>Logo</h1> */}
-        <img className="logo" src={Logo} alt="logo" />
-        <input
+        <h1>FAÇA SEU CADASTRO</h1>
+        <div>
+          <label>Nome</label>
+          <input
           value={form.name}
           name="name"
           type="text"
           placeholder="Nome Completo"
           onChange={handleChangerForm}
         />
-        <input
+        </div>
+        <div>
+          <label>E-mail</label>
+          <input
           value={form.email}
           name="email"
           type="text"
           placeholder="E-mail"
           onChange={handleChangerForm}
         />
-        <input
+        </div>
+        <div>
+          <label>CEP</label>
+          <input
+          value={form.cep}
+          name="cep"
+          type="number"
+          placeholder="Seu CEP"
+          onChange={handleChangerForm}
+        />
+        </div>
+        <div>
+          <label>Idade</label>
+          <input
+          value={form.idade}
+          name="age"
+          type="number"
+          placeholder="Sua idade"
+          onChange={handleChangerForm}
+          />
+        </div>
+        <div>
+          <label>Senha</label>
+          <input
           value={form.password}
           name="password"
           type="password"
           placeholder="Senha"
           onChange={handleChangerForm}
-        />
-        <input
-          value={form.cep}
-          name="cep"
-          type="number"
-          placeholder="CEP"
-          onChange={handleChangerForm}
-        />
+         />
+        </div>
         <button type="submit">Cadastrar</button>
         <p>
           Possui conta? Faça <span onClick={handleChangeToRegister}>Login</span>

@@ -1,14 +1,13 @@
 import * as L from "./style";
 import { ImCross } from "react-icons/im";
+import GmailLogo from "../../../assets/gmail-logo.svg"
 
 import { useState } from "react";
 import useStateByMe from "../../../hooks/useStateByMe"
 
-import Logo from "../../../assets/logo.png";
-
 export default function Login() {
   const { setShowLoginModal, setShowRegisterModal } = useStateByMe();
-  const [form, setForm] = useState({ email: ``, password: `` });
+  const [form, setForm] = useState({ name: ``, email: ``, cep: ``, password: `` });
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -30,27 +29,33 @@ export default function Login() {
     <L.Container>
       <ImCross onClick={() => setShowLoginModal(false)} />
       <L.Form onSubmit={handleSubmit}>
-        {/* <h1>Logo</h1> */}
-        <img className="logo" src={Logo} alt="logo" />
-
-        <input
+        <div>
+          <label>Login</label>
+          <input
           value={form.email}
           name="email"
           type="text"
-          placeholder="E-mail"
+          placeholder="Nome Completo"
           onChange={handleChangerForm}
-        />
-        <input
+          />
+        </div>
+        <div>
+          <label>Senha</label>
+          <input
           value={form.password}
           name="password"
           type="password"
-          placeholder="Senha"
+          placeholder="Insira sua senha"
           onChange={handleChangerForm}
         />
-        <button type="submit">Entrar</button>
-        <p>
-          É novo? <span onClick={handleChangeToRegister}>Cadastre-se</span>
-        </p>
+        </div>
+        <button className="Button-Entry" type="submit">ENTRAR</button>
+        <div>
+          <span className="Gmail">Login via e-mail</span>
+          <button className="Button-Gmail" type="submit"><img src={GmailLogo} alt="Logo do gmail" />GMAIL</button>
+        </div>
+        <span className="Without-Signup">Ainda não tem cadastro?</span>
+        <span className="Underline" onClick={handleChangeToRegister}>QUERO ME CADASTRAR</span>
       </L.Form>
     </L.Container>
   );

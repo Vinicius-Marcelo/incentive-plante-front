@@ -22,8 +22,8 @@ function Main() {
 
   return (
       <M.Container className="container-main">
-        {showRegisterModal && <Register/>}
-        {showLoginModal && <Login />}
+        {showRegisterModal && ( <Register /> )}
+        {showLoginModal && ( <Login /> )}
         <Header>
           <Button onClick={handleShowLoginModal}>Login</Button>
         </Header>
