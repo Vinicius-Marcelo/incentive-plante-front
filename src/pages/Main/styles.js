@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import BannerImage from '../../assets/banner-background.png'
+
+import BannerImage from '../../assets/banner-background.png';
+import TreeForFuture from '../../assets/image-tree.png';
 
 export const Container = styled.main`
   min-height: calc(100vh - 100px);
@@ -54,27 +56,84 @@ export const Banner = styled.section`
 `;
 
 export const OurFuture = styled.article`
-  height: 200px;
-  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 
+  .Title-OurFuture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--green);
+
+    margin-top: 59px;
+  }
+`;
+
+export const OurFutureSection = styled.section`
+  width: 821.88px;
+  height: 497.32px;
+
+  background-image: url(${TreeForFuture});
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+
+  div {
+    width: 335px;
+    height: 255px;
+
+    background-color: var(--yellow);
+    border: 3px solid var(--white);
+    border-radius: 10px;
+    padding: 28px 20px;
+
+    h4{
+      margin-bottom: 20px;
+    }
+  }
+
+  .FirstSection {
+    position: relative;
+    top: 215px;
+    right: 85px;
+  }
+
+  .SecondSection {
+    position: relative;
+    top: 215px;
+    left: 552px;
+  }
+`;
+
+export const Partners = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  padding: 20px 60px;
+  .Title-Partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  h2 {
-    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--green);
+
+    margin: 53px 0 12px;
   }
-  p {
+
+  .Logo-Partners {
+    display: flex;
+    gap: 110px;
   }
-`;
-
-export const OurFutureSection = styled.section`
-`;
-
-export const Partners = styled.section`
 `;
 
 export const BoxCarousel = styled.section`

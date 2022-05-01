@@ -5,13 +5,13 @@ export default function Header({ children }) {
   return (
     <H.Container>
       <img className="Logo" src={Logo} alt="Incentive e Plante Logo" />
-      <div className='Middle'>
+      <div>
         <nav>
-          <span>SOBRE</span>
-          <span>PROJETOS</span>
-          <span>NÚMEROS</span>
-          <span>ADOTE</span>
-          <span>COMUNIDADES</span>
+          <a href="#about">SOBRE</a>
+          <a href="#projects">PROJETOS</a>
+          <a href="#numbers">NÚMEROS</a>
+          <a href="#adopt">ADOTE</a>
+          <a href="#communities">COMUNIDADES</a>
         </nav>
       </div>
       <div className="Right-Side">{children}</div>

@@ -18,15 +18,13 @@ export const Container = styled.header`
     height: 88px;
   }
 
-  .Middle {
-    color: var(--blue);
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 45px;
-    }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 45px;
   }
 
-  .Right-Side {
+  a {
+    color: var(--gray);
   }
 `;
