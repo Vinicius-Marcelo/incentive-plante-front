@@ -1,12 +1,12 @@
 import * as M from "./styles";
 
+import { useState } from "react";
+
 import Header from "../../components/Header";
 import Button from "../../components/Button";
 import Footer from "../../components/Footer";
 import Login from "../../components/Modal/Login";
 import Register from "../../components/Modal/Register";
-
-import useStateByMe from "../../hooks/useStateByMe"
 
 import PlantDetail from "../../assets/plant-detail.svg";
 import TagLogo from "../../assets/tag-logo.svg";
@@ -14,7 +14,8 @@ import IfoodLogo from "../../assets/ifood-logo.svg";
 import JoaniniLogo from "../../assets/joanini-logo.svg"
 
 function Main() {
-  const { showLoginModal, setShowLoginModal, showRegisterModal  } = useStateByMe();
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
 
   function handleShowLoginModal() {
     setShowLoginModal(true);
@@ -22,8 +23,18 @@ function Main() {
 
   return (
       <M.Container className="container-main">
-        {showRegisterModal && ( <Register /> )}
-        {showLoginModal && ( <Login /> )}
+        {showRegisterModal && ( 
+        <Register 
+        openRegisterModal={setShowRegisterModal}
+        openLoginModal={setShowLoginModal}
+        /> 
+        )}
+        {showLoginModal && ( 
+        <Login 
+        openRegisterModal={setShowRegisterModal}
+        openLoginModal={setShowLoginModal}
+        />
+        )}
         <Header>
           <Button onClick={handleShowLoginModal}>Login</Button>
         </Header>

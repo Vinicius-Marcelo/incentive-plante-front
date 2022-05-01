@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.section`
   background-color: var(--modal-background);
   height: 100vh;
   width: 100vw;
@@ -17,8 +17,8 @@ export const Container = styled.div`
     cursor: pointer;
 
     position: absolute;
-    top: 60px;
-    right: 120px;
+    top: 40px;
+    right: 450px;
 
     font-size: 1.5rem;
     color: var(--white);
@@ -32,7 +32,7 @@ export const Form = styled.form`
   justify-content: center;
   gap: 13px;
 
-  width: 380px;
+  width: 382px;
   height: 480px;
 
   background-color: var(--modal);
@@ -51,7 +51,7 @@ export const Form = styled.form`
   }
 
   input {
-    width: 298px;
+    width: 300px;
     height: 27.5px;
 
     background-color: var(--white);
@@ -99,6 +99,7 @@ export const Form = styled.form`
   .Underline {
     cursor: pointer;
     color: var(--yellow);
+    font-size: 16px;
     text-decoration: underline;
   }
 `;
