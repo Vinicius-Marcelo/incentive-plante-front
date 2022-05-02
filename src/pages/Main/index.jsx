@@ -62,7 +62,7 @@ function Main() {
             <div className="FirstSection">
               <h4>Incentive</h4>
               <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. (O projeto) 
+              Surgimos com o propósito de incentivar pessoas a diminuir os impactos da mudança climática no mundo através do reflorestamento e ajudando projetos voltados para as minorias de cada região do Brasil.
               </p>
             </div>
           </M.OurFutureSection>
@@ -70,7 +70,7 @@ function Main() {
             <div className="SecondSection">
               <h4>Plante</h4>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Type specimen book. It has survived not only five centuries, remaining essentially unchanged.( O diferencial - plante uma nova ideia, ajude o mundo e a comunidade - o que estamos plantando no mundo! )
+              Com esse incentivo, de forma pratica, buscamos a arrecadação de contribuição financeira através da adoção de árvores, após a adoção redirecionamos a verba para o reflorestamento e ONG’s parceiras de cada região do país de acordo com a espécie de árvore adotada.
               </p>
             </div>
           </M.OurFutureSection>
