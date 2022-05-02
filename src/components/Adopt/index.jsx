@@ -6,7 +6,7 @@ import * as A from './style';
 export default function Adopt() {
     return (
         <A.Map>
-            <div className="title-adopt">
+            <div className="title-adopt Title-Partners">
                 <img src={Icon} alt='icon' />
                 <h3>Adote</h3>
             </div>

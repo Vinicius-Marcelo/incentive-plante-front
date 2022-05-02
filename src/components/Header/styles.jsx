@@ -25,6 +25,6 @@ export const Container = styled.header`
   }
 
   a {
-    color: var(--gray);
+    color: var(--blue);
   }
 `;

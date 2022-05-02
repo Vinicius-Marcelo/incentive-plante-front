@@ -37,7 +37,8 @@ export const InputInformation = styled.section`
             width: 450px;
             height: 40px;
             border-radius: 5px;
-            padding-left: 34px;
+            border: 1px solid var(--black);
+            padding: 0 16px;
             margin-top: 5px;
         }
     }

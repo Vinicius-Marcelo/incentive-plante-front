@@ -5,14 +5,11 @@ export const Communities = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .title, .cards{
+
+    .cards{
         display: flex;
         justify-content: center;
         align-items: center; 
-    }
-
-    .title{
-        margin: 51px 0 43px 0;
     }
 
     .title h3{
@@ -20,6 +17,8 @@ export const Communities = styled.section`
         font-weight: 700;
         font-size: 30px;
         line-height: 100%
+
+        margin-bottom: 25px;
     }
 
     .cards{

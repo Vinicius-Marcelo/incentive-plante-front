@@ -33,7 +33,7 @@ export const Form = styled.form`
   gap: 13px;
 
   width: 382px;
-  height: 600px;
+  height: 585px;
 
   background-color: var(--modal);
   border: 1px solid var(--border);

@@ -51,7 +51,7 @@ export const Banner = styled.section`
 
     font-weight: 700;
     font-size: 12px;
-    color: var(--gray);
+    color: var(--blue);
   }
 `;
 
@@ -69,7 +69,7 @@ export const OurFuture = styled.article`
 
     font-weight: 700;
     font-size: 30px;
-    color: var(--green);
+    color: var(--green1);
 
     margin-top: 59px;
   }
@@ -118,18 +118,6 @@ export const Partners = styled.section`
   justify-content: center;
   align-items: center;
 
-  .Title-Partners {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-weight: 700;
-    font-size: 30px;
-    color: var(--green);
-
-    margin: 53px 0 12px;
-  }
-
   .Logo-Partners {
     display: flex;
     gap: 110px;
@@ -158,30 +146,27 @@ export const DifferentialText = styled.section`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  .title-numbers{
-    display: flex;  
-    justify-content: center;
-    height: 30px;
-    margin-top: 26px;
-  }
+
   h3{
-    margin-bottom: 30px;
     color: white;
     font-weight: 700;
     font-size: 30px;
     line-height: 100%
   }
+
   .data{
     display: flex;
     align-items: center;
     gap: 65.57px;
   }
+
   .help{
     font: weight: 700;
     font-size: 16px;
     line-height: 19px;
     color: #fff;
   }
+
   button{
     all: unset;
     display: flex; 
@@ -205,5 +190,5 @@ export const Graphic = styled.section`
 
 export const Communitie = styled.section`
   background-color: #012030;
-  width: 100vw;
+  max-width: 100vw;
 `;

@@ -87,8 +87,8 @@ function Main() {
             <img src={JoaniniLogo} alt="Logo da Joanini Transporte e Logística"/>
           </div>
         </M.Partners>
-      <M.DifferentialText>
-          <div className="title-numbers">
+      <M.DifferentialText id="numbers">
+          <div className="Title-Partners Title-number">
             <img src={Icon} alt='icon' />
             <h3>Números</h3>
           </div>
@@ -101,11 +101,11 @@ function Main() {
           <button>QUERO ADOTAR</button>
         </M.DifferentialText>
 
-        <M.Graphic>
+        <M.Graphic id="adopt">
           <Adopt />
         </M.Graphic>
 
-        <M.Communitie>
+        <M.Communitie id="communities">
           <Communities />
         </M.Communitie>
         <InputInformation />

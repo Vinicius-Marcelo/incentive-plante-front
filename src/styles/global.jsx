@@ -52,4 +52,16 @@ export default createGlobalStyle`
   a {
     text-decoration: none;
   }
+
+  .Title-Partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--green1);
+
+    margin: 53px 0 12px;
+  }
 `;

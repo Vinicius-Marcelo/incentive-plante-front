@@ -7,13 +7,6 @@ export const Map = styled.section`
     align-items: center;
     flex-direction: column;
     justify-content: center;
-
-  .title-adopt{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 33.02px 0 11.82px 0;  
-  }
   
   .title-adopt h3{
     font-weight: 700;

@@ -8,7 +8,6 @@ export default function Header({ children }) {
       <div>
         <nav>
           <a href="#about">SOBRE</a>
-          <a href="#projects">PROJETOS</a>
           <a href="#numbers">NÚMEROS</a>
           <a href="#adopt">ADOTE</a>
           <a href="#communities">COMUNIDADES</a>
