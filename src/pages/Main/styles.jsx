@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-import BannerImage from '../../assets/banner-background.png';
-import TreeForFuture from '../../assets/image-tree.png';
+import BannerImage from "../../assets/banner-background.png";
+import TreeForFuture from "../../assets/image-tree.png";
 
 export const Container = styled.main`
   min-height: calc(100vh - 100px);
@@ -94,7 +94,7 @@ export const OurFutureSection = styled.section`
     border-radius: 10px;
     padding: 28px 20px;
 
-    h4{
+    h4 {
       margin-bottom: 20px;
     }
   }
