@@ -30,6 +30,8 @@ export default createGlobalStyle`
     font-family: 'Inter', sans-serif;
 
     height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 
   button {

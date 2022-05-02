@@ -10,7 +10,7 @@ export default function InputInformation() {
             </div>
             <span>Cadastre-se e receba informações direto no seu email toda semana</span>
             <div className='inputs'>
-                <label>Nome Complete</label>
+                <label>Nome Completo</label>
                 <input type='text' placeholder='Insira seu nome' />
             </div>
             <div className='inputs email'>
