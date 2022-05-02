@@ -1,62 +1,29 @@
 import * as F from "./styles";
-import {
-  BsInstagram,
-  BsFacebook,
-  BsLinkedin,
-  BsYoutube,
-  BsTwitter,
-} from "react-icons/bs";
-import { FaRegCopyright } from "react-icons/fa";
+
+import Instagram from '../../assets/instagram.svg';
+import Facebook from '../../assets/facebook.svg';
+import Twiter from '../../assets/twiter.svg';
+import Linkedin from '../../assets/linkedin.svg';
 
 export default function Footer() {
   return (
     <F.Container>
-      <F.SocialMidias>
-        <a
-          className="social_icon"
-          href="https://www.instagram.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <BsInstagram />
-        </a>
-        <a
-          className="social_icon"
-          href="https://www.facebook.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <BsFacebook />
-        </a>
-        <a
-          className="social_icon"
-          href="https://www.linkedin.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <BsLinkedin />
-        </a>
-        <a
-          className="social_icon"
-          href="https://www.youtube.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <BsYoutube />
-        </a>
-        <a
-          className="social_icon"
-          href="https://twitter.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <BsTwitter />
-        </a>
-      </F.SocialMidias>
-      <F.Copyright>
-        <p>2022</p>
-        <FaRegCopyright />
-      </F.Copyright>
+      <div className="menu">
+        <div>
+          <p>SOBRE</p>
+          <p>PARCEIROS</p>
+        </div>
+        <div>
+          <p>ADOTE</p>
+          <p>COMUNIDADES</p>
+        </div>
+      </div>
+      <div className="redes">
+        <img src={Instagram} alt='instagram' />
+        <img src={Facebook} alt='facebook' />
+        <img src={Twiter} alt='twiter' />
+        <img src={Linkedin} alt='linkedin' />
+      </div>
     </F.Container>
   );
 }

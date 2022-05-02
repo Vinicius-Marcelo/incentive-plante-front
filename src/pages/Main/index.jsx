@@ -4,14 +4,22 @@ import { useState } from "react";
 
 import Header from "../../components/Header";
 import Button from "../../components/Button";
-import Footer from "../../components/Footer";
 import Login from "../../components/Modal/Login";
 import Register from "../../components/Modal/Register";
+import Footer from "../../components/Footer";
 
 import PlantDetail from "../../assets/plant-detail.svg";
 import TagLogo from "../../assets/tag-logo.svg";
 import IfoodLogo from "../../assets/ifood-logo.svg";
 import JoaniniLogo from "../../assets/joanini-logo.svg"
+import Icon from '../../assets/icon.svg';
+
+import Adopt from "../../components/Adopt";
+import Communities from "../../components/Communities";
+import Nordeste from '../../components/Numbers/Nordeste';
+import North from "../../components/Numbers/North";
+import South from "../../components/Numbers/South";
+import InputInformation from "../../components/InputInformation";
 
 function Main() {
   const [showRegisterModal, setShowRegisterModal] = useState(false);
@@ -79,11 +87,29 @@ function Main() {
             <img src={JoaniniLogo} alt="Logo da Joanini Transporte e Logística"/>
           </div>
         </M.Partners>
-      <Footer>
-        <div>redes sociais</div>
+      <M.DifferentialText>
+          <div className="title-numbers">
+            <img src={Icon} alt='icon' />
+            <h3>Números</h3>
+          </div>
+          <div className="data">
+            <South />
+            <North />
+            <Nordeste />
+          </div>
+          <span className="help">Ajude a mudar o mundo e adote um árvore!</span>
+          <button>QUERO ADOTAR</button>
+        </M.DifferentialText>
 
-        <div>Copy</div>
-      </Footer>
+        <M.Graphic>
+          <Adopt />
+        </M.Graphic>
+
+        <M.Communitie>
+          <Communities />
+        </M.Communitie>
+        <InputInformation />
+        <Footer />
     </M.Container>
   );
 }

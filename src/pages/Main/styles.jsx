@@ -141,11 +141,8 @@ export const BoxCarousel = styled.section`
   display: flex;
   justify-content: space-around;
   align-items: center;
-
   padding: 20px 60px;
-
   height: 250px;
-
   div {
     width: 200px;
     height: 200px;
@@ -155,61 +152,58 @@ export const BoxCarousel = styled.section`
 `;
 
 export const DifferentialText = styled.section`
-  height: 200px;
-  background-color: var(--white);
-
+  min-height: 575px;
+  background-color: #012030;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-
-  padding: 20px 60px;
-
-  h2 {
-    margin-bottom: 30px;
+  .title-numbers{
+    display: flex;  
+    justify-content: center;
+    height: 30px;
+    margin-top: 26px;
   }
-  p {
+  h3{
+    margin-bottom: 30px;
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%
+  }
+  .data{
+    display: flex;
+    align-items: center;
+    gap: 65.57px;
+  }
+  .help{
+    font: weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+  }
+  button{
+    all: unset;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font: weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    width: 265px;
+    height: 35px;
+    border-radius: 10px;
+    background: #ffdd65;
+    margin-bottom: 48px;
   }
 `;
 
 export const Graphic = styled.section`
-  background-color: var(--transparent-green);
-
-  height: 200px;
-  padding: 20px 60px;
+  background-color: #fff;
+  width: 100vw;
 `;
 
-export const Map = styled.section`
-  background-color: var(--white);
-
-  height: 500px;
-  padding: 20px 60px;
-`;
-
-export const BoxInfo = styled.section`
-  display: flex;
-  justify-content: center;
-  padding: 0 60px;
-
-  background-color: var(--green);
-
-  .info {
-    width: 350px;
-    height: 300px;
-    background-color: var(--green);
-
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-  }
-
-  .info--second {
-    border-left: 2px solid;
-    border-right: 2px solid;
-    border-color: var(--white);
-
-    width: 400px;
-    margin: 0 25px;
-  }
+export const Communitie = styled.section`
+  background-color: #012030;
+  width: 100vw;
 `;

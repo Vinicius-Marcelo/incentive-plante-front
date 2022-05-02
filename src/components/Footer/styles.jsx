@@ -1,41 +1,35 @@
 import styled from "styled-components";
 
-export const Container = styled.footer`
-  background-color: var(--transparent-green);
-  height: 150px;
-  padding: 0 60px;
-
+export const Container = styled.section`
   display: flex;
-  align-items: center;
   justify-content: space-between;
-`;
+  align-items: center;
+  
+  padding: 0 110px 0 110px;
+  background: #ffdd65;
+  height: 232px;
 
-export const SocialMidias = styled.section`
-  width: 200px;
-  display: flex;
-  justify-content: space-around;
+  .menu{
+    width: 256px;
+    height: 86px;
 
-  .social_icon {
-    color: var(--green);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
 
-    :hover {
-      color: var(--transparent-green);
-    }
-
-    svg {
-      width: 30px;
-      height: 30px;
+    div{
+      display: flex;
+      justify-content: flex-start;
+      gap: 81px;
+      margin-bottom: 48px;
     }
   }
-`;
 
-export const Copyright = styled.section`
-  display: flex;
-  align-items: center;
+  .redes{
+    width: 140px;
 
-  color: var(--green);
-
-  p {
-    margin-right: 5px;
+    img{
+      margin-left: 9px;
+    }
   }
 `;
